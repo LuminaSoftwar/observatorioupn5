@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portal académico para comprender y explorar información de seguridad ciudadana.">
+<title>Observatorio de Seguridad Ciudadana | Portal público académico</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" th:href="@{/css/estilos.css}">
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script defer th:src="@{/js/app.js}"></script>
+</head>
+<body class="pagina-bienvenida">
+<a class="skip" href="#contenido">Saltar al contenido principal</a>
+<header class="cabecera">
+ <div class="envoltura cabecera-interior">
+  <a class="marca marca-enlace" href="/" aria-label="Observatorio de Seguridad Ciudadana, inicio"><span class="emblema" aria-hidden="true">◈</span><div><strong>Observatorio de Seguridad Ciudadana</strong><span>Información para comprender y prevenir</span></div></a>
+  <span class="etiqueta">PROTOTIPO ACADÉMICO UPN</span>
+ </div>
+</header>
+<nav class="navegacion" aria-label="Navegación principal"><div class="envoltura enlaces">
+ <a href="/" aria-current="page">Inicio</a><a href="#observatorio">El observatorio</a><a href="#funcionalidades">Funcionalidades</a><a href="#beneficiarios">¿A quién ayuda?</a><a href="/dashboard">Dashboard</a><a href="/ayuda">Ayuda</a>
+</div></nav>
+<div class="herramientas"><div class="envoltura herramientas-interior"><span>Opciones de lectura</span><button aria-label="Aumentar tamaño de texto" id="texto-mas" type="button">A+ Aumentar</button><button aria-label="Disminuir tamaño de texto" id="texto-menos" type="button">A− Reducir</button><button aria-pressed="false" id="contraste" type="button">Alto contraste: desactivado</button><button id="restablecer" type="button">Restablecer</button></div></div>
+<main class="envoltura" id="contenido" tabindex="-1">
+ <section class="landing-hero" id="observatorio">
+  <div class="landing-copy"><span class="eyebrow">Datos claros · Decisiones informadas</span>
+   <h1>Comprender la seguridad ciudadana empieza con información accesible.</h1>
+   <p>Explora indicadores, conoce su evolución y compara información territorial mediante visualizaciones y explicaciones sencillas.</p>
+   <div class="landing-acciones"><a class="boton" href="/dashboard">Explorar el dashboard <span aria-hidden="true">→</span></a><a class="boton secundario" href="/indicadores">Consultar indicadores</a></div>
+   <p class="landing-nota">Prototipo educativo UPN. Los datos mostrados en esta versión son simulados.</p>
+  </div>
+  <aside class="landing-resumen" aria-label="Resumen del portal"><div class="resumen-icono" aria-hidden="true">◈</div><h2>Observatorio de Seguridad Ciudadana</h2><p>Un espacio de consulta pública para transformar cifras en información comprensible.</p><ul><li>Indicadores y tendencias</li><li>Comparaciones territoriales</li><li>Fuentes y metodología visibles</li></ul></aside>
+ </section>
+ <section class="landing-seccion" id="funcionalidades"><div class="seccion-intro"><span class="eyebrow">Explora el portal</span><h2>Información organizada para entender mejor</h2><p>Accede a herramientas que facilitan la consulta y lectura de estadísticas de seguridad.</p></div>
+  <div class="landing-tarjetas">
+   <article class="landing-card"><span aria-hidden="true">▤</span><h3>Indicadores</h3><p>Consulta hechos delictivos y otros indicadores por territorio y periodo.</p><a href="/indicadores">Ir a indicadores →</a></article>
+   <article class="landing-card"><span aria-hidden="true">▥</span><h3>Dashboard interactivo</h3><p>Visualiza KPI, tendencias mensuales y comparaciones mediante gráficos.</p><a href="/dashboard">Ver dashboard →</a></article>
+   <article class="landing-card"><span aria-hidden="true">⌖</span><h3>Exploración territorial</h3><p>Revisa información geográfica, mapas y diferencias entre territorios.</p><a href="/mapa">Explorar mapa →</a></article>
+   <article class="landing-card"><span aria-hidden="true">⇄</span><h3>Comparaciones</h3><p>Contrasta indicadores entre departamentos y periodos seleccionados.</p><a href="/comparaciones">Comparar territorios →</a></article>
+  </div>
+ </section>
+ <section class="landing-seccion beneficiarios" id="beneficiarios"><div><span class="eyebrow">Diseñado para distintos usuarios</span><h2>¿A quién está dirigido?</h2><p>La información se presenta en recorridos diferenciados para facilitar su uso.</p></div>
+  <div class="beneficiario-grid"><article><h3>Ciudadanía</h3><p>Personas que buscan conocer tendencias de seguridad en su comunidad con explicaciones sencillas y filtros guiados.</p><a href="/ciudadano" class="boton secundario">Ingresar como ciudadano</a></article><article><h3>Investigadores y estudiantes</h3><p>Usuarios que necesitan explorar series, comparar territorios y descargar datos para trabajos académicos.</p><a href="/investigador" class="boton secundario">Ingresar como investigador</a></article></div>
+ </section>
+ <section class="landing-ayuda" id="ayuda"><div><span class="eyebrow">Orientación y transparencia</span><h2>¿Cómo interpretar los resultados?</h2><p>Consulta las unidades, periodos, definiciones y metodología de cada indicador. Recuerda verificar la fuente y el carácter de los datos antes de utilizarlos.</p></div><a class="boton" href="/ayuda">Ir al centro de ayuda</a></section>
+ <div class="aviso-datos mt-4"><strong>Nota sobre los datos:</strong> este es un prototipo académico desarrollado para la UPN y no representa un portal oficial del MININTER. Los valores del dashboard son simulados con fines demostrativos; no deben utilizarse para decisiones reales.</div>
+</main>
+<footer><div class="envoltura"><strong>Portal Público del Observatorio de Seguridad – Proyecto académico UPN</strong><p>Prototipo educativo sin afiliación oficial al MININTER · <a href="/ayuda">Ayuda y accesibilidad</a></p></div></footer>
+</body></html>
